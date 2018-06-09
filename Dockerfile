@@ -2,4 +2,4 @@ FROM alpine:latest
 
 RUN apk add --no-cache --update gomplate
 
-ENTRYPOINT gomplate
+ENTRYPOINT [ "/usr/bin/gomplate"  ]
