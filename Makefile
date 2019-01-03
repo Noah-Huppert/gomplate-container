@@ -1,4 +1,4 @@
-.PHONY: build
+.PHONY: build push
 
 # Make log: github.com/Noah-Huppert/make-log
 NO_COLOR=\033[0m
@@ -34,3 +34,11 @@ build:
 	docker build -t "${NAMETAG}" .
 
 	$(call log, ok, Built Docker image with \""${NAMETAG}"\" tag)
+
+# push docker image to registry
+push:
+	$(call log, ok, Pushing Docker image with \""${NAMETAG}"\" tag)
+
+	docker push "${NAMETAG}"
+
+	$(call log, ok, Pushed Docker image with \""${NAMETAG}"\" tag)

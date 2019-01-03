@@ -4,6 +4,7 @@ Gomplate tool Docker container.
 # Table Of Contents
 - [Overview](#overview)
 - [Development](#development)
+- [Deployment](#deployment)
 
 # Overview
 Docker container which runs the [Gomplate](https://gomplate.hairyhenderson.ca/) 
@@ -38,3 +39,9 @@ To build the image with a specific tag run:
 make TAG="<tag>"
 ```
 
+# Deployment
+To push the Docker image to the registry by running:
+
+```
+make push
+```
